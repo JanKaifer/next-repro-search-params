@@ -6,7 +6,6 @@ export const useCustomSearchParams = () => {
   if (useIsAppDir()) {
     return useSearchParams();
   }
-
   const router = useRouter();
   return new URLSearchParams(JSON.parse(JSON.stringify(router.query)));
 };
